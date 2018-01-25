@@ -7,7 +7,7 @@ namespace PostSharpExample.Aspects
     [PSerializable]
     internal class ValidateParametersAttribute : BaseAspect
     {
-        private readonly bool _checkLessThenZero;
+        private bool _checkLessThenZero;
 
         public ValidateParametersAttribute(bool checkLessThenZero)
         {

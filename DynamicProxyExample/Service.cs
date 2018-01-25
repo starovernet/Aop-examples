@@ -1,14 +1,13 @@
-﻿using System;
-using CommonProject;
+﻿using CommonProject;
 
 namespace DynamicProxyExample
 {
     public class Service
     {
-        public virtual void Transfer(int sourceID, int destinationID, int size)
+        public virtual void Transfer(int sourceId, int destinationId, int size)
         {
-            Storage source = Storage.GetById(sourceID);
-            Storage destination = Storage.GetById(destinationID);
+            Storage source = Storage.GetById(sourceId);
+            Storage destination = Storage.GetById(destinationId);
 
             var values = source.GetValues(size);
             destination.PutValues(values);

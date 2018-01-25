@@ -8,10 +8,10 @@ namespace PostSharpExample
         [ValidateParameters(false)]
         [SafeExecution]
         [LogParameters]
-        public void Transfer(int sourceID, int destinationID, int size)
+        public void Transfer(int sourceId, int destinationId, int size)
         {
-            Storage source = Storage.GetById(sourceID);
-            Storage destination = Storage.GetById(destinationID);
+            Storage source = Storage.GetById(sourceId);
+            Storage destination = Storage.GetById(destinationId);
 
             var values = source.GetValues(size);
             destination.PutValues(values);
